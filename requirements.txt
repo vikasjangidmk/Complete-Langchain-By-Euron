@@ -1,0 +1,57 @@
+# === Core LangChain Stack ===
+langchain
+langchain-community
+
+# === LLM Providers (Free/Open Source) ===
+# For Groq (LLM as a service using models like LLaMA 3, Mixtral, etc.)
+groq
+
+# HuggingFace Hub (for free open-source models)
+huggingface_hub
+transformers
+sentence-transformers
+
+# Ollama (run local open-source models like LLaMA 3, Mistral, etc.)
+ollama
+
+# === Embeddings and Vector Databases ===
+faiss-cpu               # Local vector search
+chromadb                # Lightweight open-source vector DB
+qdrant-client           # Open-source vector DB (cloud/local)
+
+# === File Parsing & Document Loaders ===
+pypdf                   # PDF file loader
+python-docx             # Word file support
+beautifulsoup4          # HTML parsing
+unstructured            # General document parsing
+PyMuPDF                 # Better PDF processing
+pdfminer.six            # Alternative PDF reader
+
+# === Web App Interface (Optional UI) ===
+streamlit
+gradio
+
+# === Utilities ===
+python-dotenv           # Load API keys from .env file
+tqdm                    # Progress bars
+requests
+numpy
+pandas
+
+# === Visualization and Debugging (optional but useful) ===
+matplotlib
+plotly
+networkx                # For graph-based visualizations (e.g., agent flows)
+
+# === Optional LangChain/RAG Add-ons ===
+duckduckgo-search       # For web search with LangChain tools
+arxiv                   # Scientific paper loader
+wikipedia               # Wikipedia tool for LangChain
+
+# === For Local Deployment / Serving APIs ===
+uvicorn
+fastapi
+
+# === Optional: Async and Streaming Support ===
+aiohttp
+sse-starlette           # For Server-Sent Events in Streamlit or FastAPI
