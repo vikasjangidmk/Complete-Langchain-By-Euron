@@ -1,6 +1,9 @@
 # === Core LangChain Stack ===
 langchain
 langchain-community
+langchain-openai
+langchain-groq
+
 
 # === LLM Providers (Free/Open Source) ===
 # For Groq (LLM as a service using models like LLaMA 3, Mixtral, etc.)
