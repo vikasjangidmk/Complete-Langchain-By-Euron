@@ -58,3 +58,7 @@ fastapi
 # === Optional: Async and Streaming Support ===
 aiohttp
 sse-starlette           # For Server-Sent Events in Streamlit or FastAPI
+
+
+# Other optional dependencies
+sqlalchemy              # For database interactions

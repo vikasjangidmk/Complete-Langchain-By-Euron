@@ -1,0 +1,24 @@
+
+1. Basic Concepts
+
+-What is Gradient Descent?
+-How does the learning rate affect the convergence of Gradient Descent?
+-What are the challenges of using a fixed learning rate?
+2. Variants of Gradient Descent
+
+-Explain the difference between Batch Gradient Descent, Stochastic Gradient Descent, and Mini-Batch Gradient Descent.
+-When would you use each variant of Gradient Descent?
+-How can you improve the convergence speed of Gradient Descent?
+3. Practical Considerations
+
+-How do you handle vanishing and exploding gradients?
+-What is the role of regularization in Gradient Descent?
+-How do you choose the optimal learning rate for your model?
+-Explain the concept of momentum in Gradient Descent.
+-What is the difference between batch normalization and layer normalization?
+4. Advanced Topics
+
+-How does adaptive learning rate methods like Adam and RMSprop work?
+-What is the role of the optimizer in Gradient Descent?
+-Explain the concept of gradient clipping and its importance in training deep neural networks.
+-How can you implement early stopping to prevent overfitting?
