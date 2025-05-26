@@ -3,6 +3,7 @@ langchain
 langchain-community
 langchain-openai
 langchain-groq
+langchain-Core
 
 
 # === LLM Providers (Free/Open Source) ===
