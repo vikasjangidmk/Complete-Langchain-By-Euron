@@ -1,24 +1,69 @@
-
 1. Basic Concepts
 
--What is Gradient Descent?
--How does the learning rate affect the convergence of Gradient Descent?
--What are the challenges of using a fixed learning rate?
+- What is Gradient Descent?
+  Gradient Descent is an optimization algorithm used to minimize the loss function by iteratively updating model parameters in the direction of the negative gradient of the loss function with respect to the parameters.
+
+- How does the learning rate affect the convergence of Gradient Descent?
+  The learning rate determines the size of the steps taken toward the minimum. A high learning rate may cause overshooting and divergence, while a low learning rate may result in slow convergence or getting stuck in local minima.
+
+- What are the challenges of using a fixed learning rate?
+  A fixed learning rate may not be suitable throughout the training process. It may start too high, causing divergence, or too low, leading to slow convergence. It does not adapt to the loss landscape's curvature or changes.
+
 2. Variants of Gradient Descent
 
--Explain the difference between Batch Gradient Descent, Stochastic Gradient Descent, and Mini-Batch Gradient Descent.
--When would you use each variant of Gradient Descent?
--How can you improve the convergence speed of Gradient Descent?
+- Explain the difference between Batch Gradient Descent, Stochastic Gradient Descent, and Mini-Batch Gradient Descent.
+  - Batch Gradient Descent: Uses the entire dataset to compute the gradient at each step. It is computationally expensive and slow for large datasets.
+  - Stochastic Gradient Descent (SGD): Uses one random sample to compute the gradient, leading to faster but noisier updates.
+  - Mini-Batch Gradient Descent: Uses a small batch of samples (typically 32-256) to compute the gradient, offering a balance between speed and stability.
+
+- When would you use each variant of Gradient Descent?
+  - Batch GD: Suitable for small datasets where full gradient computation is feasible.
+  - SGD: Preferred for large datasets and online learning scenarios.
+  - Mini-Batch GD: Common in deep learning due to its efficiency and regularization effect through noise.
+
+- How can you improve the convergence speed of Gradient Descent?
+  Techniques include:
+  - Learning rate scheduling
+  - Momentum
+  - Adaptive optimizers (e.g., Adam, RMSprop)
+  - Proper initialization
+  - Normalization (e.g., batch normalization)
+
 3. Practical Considerations
 
--How do you handle vanishing and exploding gradients?
--What is the role of regularization in Gradient Descent?
--How do you choose the optimal learning rate for your model?
--Explain the concept of momentum in Gradient Descent.
--What is the difference between batch normalization and layer normalization?
+- How do you handle vanishing and exploding gradients?
+  - Use activation functions like ReLU
+  - Apply gradient clipping
+  - Use proper weight initialization (e.g., Xavier, He)
+  - Normalize inputs
+  - Use architectures like LSTM or GRU for RNNs
+
+- What is the role of regularization in Gradient Descent?
+  Regularization techniques like L1, L2, and dropout help prevent overfitting by penalizing large weights and encouraging simpler models, leading to better generalization during training.
+
+- How do you choose the optimal learning rate for your model?
+  - Use learning rate schedulers (e.g., ReduceLROnPlateau)
+  - Perform learning rate range tests
+  - Use adaptive optimizers that tune the learning rate automatically
+
+- Explain the concept of momentum in Gradient Descent.
+  Momentum accelerates Gradient Descent by considering the past gradients' direction and damping oscillations. It adds a fraction of the previous update vector to the current one.
+
+- What is the difference between batch normalization and layer normalization?
+  - Batch Normalization: Normalizes across the batch dimension, commonly used in CNNs.
+  - Layer Normalization: Normalizes across the feature dimension within each sample, more effective in RNNs and transformers.
+
 4. Advanced Topics
 
--How does adaptive learning rate methods like Adam and RMSprop work?
--What is the role of the optimizer in Gradient Descent?
--Explain the concept of gradient clipping and its importance in training deep neural networks.
--How can you implement early stopping to prevent overfitting?
+- How do adaptive learning rate methods like Adam and RMSprop work?
+  - RMSprop: Maintains a moving average of the squared gradients and divides the gradient by the root of this average.
+  - Adam: Combines momentum and RMSprop by keeping track of the first and second moment of gradients and applying bias correction.
+
+- What is the role of the optimizer in Gradient Descent?
+  The optimizer determines how the weights are updated based on the gradients. It affects the convergence rate, stability, and ability to escape local minima.
+
+- Explain the concept of gradient clipping and its importance in training deep neural networks.
+  Gradient clipping limits the magnitude of gradients to a threshold to prevent exploding gradients, which can destabilize training and lead to numerical issues.
+
+- How can you implement early stopping to prevent overfitting?
+  Early stopping monitors validation loss and stops training if the loss does not improve for a predefined number of epochs (patience), preventing overfitting and saving computational resources.
